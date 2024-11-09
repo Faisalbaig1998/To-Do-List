@@ -3,18 +3,33 @@
   text-align: center;
 }
 
-#task-list {
+#task-container {
   border: 2px solid greenyellow;
   width: 100%;
   height: auto;
   min-height: 100px;
 }
 
-#task-list ul {
-  padding-left: 20px;
-  list-style-type: disc;
+#task-container ul {
+  list-style-type: none;
 }
 
 button {
   margin: 5px;
+}
+
+#task-container ul li {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+#task-container ul li span {
+  margin-left: 20px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: grey;
 }
