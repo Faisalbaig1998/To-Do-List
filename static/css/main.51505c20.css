@@ -1,2 +1,0 @@
-*{box-sizing:border-box;margin:0;padding:0}#title{border:2px solid red;text-align:center}#task-container{border:2px solid #adff2f;height:auto;min-height:100px;width:100%}#task-container ul{list-style-type:none}button{margin:5px}#task-container ul li{border:1px solid #000;border-radius:2px;height:18px;width:18px}#task-container ul li span{margin-left:20px}.completed{color:grey;text-decoration:line-through}
-/*# sourceMappingURL=main.51505c20.css.map*/
