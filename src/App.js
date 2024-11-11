@@ -11,7 +11,7 @@ const App = () => {
     }
   };
 
-  const taskComplete = (index) => {
+  const toggleTaskComplete = (index) => {
     setTasks((prevTasks) =>
       prevTasks.map((task, i) =>
         i === index ? { ...task, completed: !task.completed } : task
@@ -19,28 +19,57 @@ const App = () => {
     );
   };
 
-  const removeTask = () => {
-    setTasks(tasks.slice(0, -1));
+  const removeTask = (index) => {
+    setTasks((prevTasks) => prevTasks.filter((_, i) => i !== index));
   };
 
   return (
     <>
-      <h1 id="title">My To-Do List</h1>
-      <div id="task-container">
-        <ul id="task-list">
+      <h1 className="title">My To-Do List</h1>
+      <div className="container">
+        <div className="task-list">
           {tasks.map((task, index) => (
-            <li
-              key={index}
-              onClick={() => taskComplete(index)}
-              className={task.completed ? "completed" : ""}
-            >
-              <span>{task.text}</span>
-            </li>
+            <div className="task-container" key={index}>
+              <div className="checkBox">
+                <input
+                  type="checkbox"
+                  onClick={() => {
+                    toggleTaskComplete(index);
+                  }}
+                />
+              </div>
+              <div className="task-name">
+                <h4>{task.text}</h4>
+              </div>
+              <div className="remove-container">
+                <span
+                  onClick={() => {
+                    removeTask(index);
+                  }}
+                >
+                  &#x2715;
+                </span>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
       <button onClick={addTask}>Add Task</button>
-      <button onClick={removeTask}>Remove Task</button>
+      <div className="container">
+        <h1 className="title">Completed Task</h1>
+        <div className="task-list">
+          {tasks.map((task, index) => (
+            <div className="task-container" key={index}>
+              <div className="checkBox">
+                <input type="checkbox" />
+              </div>
+              <div className="task-name">
+                <h4>{task.text}</h4>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 };
