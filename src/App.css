@@ -51,6 +51,7 @@
   flex-direction: column;
   opacity: 0;
   transition: opacity 0.5s;
+  font-weight: bolder;
   /* justify-content: space-evenly; */
 }
 
@@ -75,6 +76,24 @@
 }
 
 .remove-container:hover {
+  color: red;
   /* border: 1px solid green; */
   opacity: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+button {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-left: 1.5rem;
+  width: 100px;
+  height: 40px;
+}
+
+button:hover {
+  border: none;
+  background-color: rgb(176, 240, 240);
 }
