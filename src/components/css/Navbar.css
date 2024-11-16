@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Itim&family=Montez&family=Outfit:wght@100..900&family=Smooch&display=swap");
+
+#Navbar {
+  width: 20%;
+  height: 100vh;
+  /* min-height: 800px; */
+  overflow-y: scroll;
+  /* border: 2px solid red; */
+  /* background-color: aqua; */
+  /* position: fixed; */
+  float: left;
+}
+
+.hamburger {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 3rem;
+  height: 90%;
+  /* border: 1px solid blue; */
+}
+
+.hamburger > span {
+  height: 5px;
+  width: 80%;
+  background-color: green;
+  /* border: 1px solid green; */
+}
+
+.hamburger-container {
+  align-items: center;
+  display: flex;
+  /* border: 2px solid black; */
+  height: 50px;
+}
+
+#Navbar::-webkit-scrollbar {
+  width: 10px; /* Customize the width */
+}
+
+#Navbar::-webkit-scrollbar-thumb {
+  background-color: rgba(49, 49, 49, 0.081);
+  border-radius: 10px;
+}
+#Navbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(49, 49, 49, 0.5);
+}
+
+#Navbar::-webkit-scrollbar-track {
+  box-shadow: inset 0px 0px 2px black;
+  background: #f1f1f1;
+}
+
+/* .hamburger:nth-child(1),
+.hamburger:nth-child(3) {
+  transform: rotate(45deg);
+} */
+
+/* #Navbar::after {
+  content: "";
+  clear: both;
+} */
+.sidebar-items {
+  font-family: "Outfit";
+}
+
+.sidebar-items ul li {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.sidebar-items ul li:hover {
+  cursor: pointer;
+  background-color: rgb(8, 233, 113);
+}
+
+.sidebar-items ul li:active {
+  background-color: red;
+}
+
+.sidebar-items ul li a {
+  text-decoration: none;
+}
+
+.sidebar-items ul li a:visited {
+  color: black;
+}
