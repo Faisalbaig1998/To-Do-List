@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import "./css/Navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [show, setShow] = useState(true);
   //   console.log("show value: ", show);
 
   useEffect(() => {
     console.log("show value:", show);
-  }, [show]);
+  }, [show, props]);
 
   return (
     <div id="Navbar">
@@ -25,7 +25,7 @@ const Navbar = () => {
         <ul>
           <li>
             <a href="#">My Tasks</a>
-            {/* <p>{tasks.length}</p> */}
+            <p>{props.numberOfTasks.length}</p>
           </li>
           <li>
             <a href="#">Important</a>

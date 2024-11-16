@@ -87,3 +87,8 @@
 .sidebar-items ul li a:visited {
   color: black;
 }
+
+.sidebar-items ul li p {
+  float: right;
+  margin-right: 10px;
+}

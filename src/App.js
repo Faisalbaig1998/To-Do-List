@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar numberOfTasks={tasks} />
       <div className="main">
         <h1 className="title">My To-Do List</h1>
         <div className="container">
