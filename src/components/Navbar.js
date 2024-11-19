@@ -6,11 +6,12 @@ const Navbar = (props) => {
   //   console.log("show value: ", show);
 
   useEffect(() => {
-    console.log("show value:", show);
+    // console.log("show value:", show);
+    console.log("Dark props in Navbar: ", props.darkMode);
   }, [show, props]);
 
   return (
-    <div id="Navbar">
+    <div id="Navbar" className={props.darkMode ? "dark-mode" : ""}>
       <div
         className="hamburger-container"
         onClick={() => setShow((prevShow) => !prevShow)}
@@ -21,11 +22,15 @@ const Navbar = (props) => {
           <span></span>
         </div>
       </div>
-      <div className="sidebar-items">
+      <div
+        className={props.darkMode ? "sidebar-items dark-mode" : "sidebar-items"}
+      >
         <ul>
           <li>
             <a href="#">My Tasks</a>
-            <p>{props.numberOfTasks.length}</p>
+            {props.numberOfTasks.length > 0 && (
+              <p>{props.numberOfTasks.length}</p>
+            )}
           </li>
           <li>
             <a href="#">Important</a>

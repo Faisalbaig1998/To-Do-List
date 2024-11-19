@@ -1,24 +1,37 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+.dark-mode {
+  --bg-color: black;
+  --text-color: white;
+}
+
 .title {
   /* border: 2px solid red; */
+  /* width: 80%; */
   text-align: center;
   padding: 10px;
   font-size: 1.5em;
-  /* float: left; */
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
   /* border: 2px solid greenyellow; */
-  width: 80%;
   padding: 10px;
   min-height: 100px;
-  float: left;
+  /* float: left; */
 }
 
 .task-container {
   /* float: left; */
   width: 100%;
   height: 50px;
-  border: 1px solid black;
+  border: 1px solid var(--text-color);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -53,7 +66,7 @@
   display: flex;
   /* flex-direction: column; */
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 300ms;
   font-weight: bolder;
   justify-content: center;
   align-items: center;
@@ -104,11 +117,17 @@ button:hover {
   background-color: rgb(8, 233, 113);
 }
 
-/* .main {
+.main {
+  width: 80%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 300ms;
+  /* border: 2px solid red; */
   float: left;
+  height: 100vh;
 }
 
-.main::after {
+/* .main::after {
   content: "";
   clear: both;
 } */

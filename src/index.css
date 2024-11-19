@@ -3,3 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+.dark-mode {
+  --bg-color: black;
+  --text-color: white;
+}
+
+#root {
+  /* background-color: var(--bg-color); */
+  background-color: black;
+  color: var(--text-color);
+}

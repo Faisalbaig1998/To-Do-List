@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
+  const [isDark, setDark] = useState(false);
 
   const addTask = () => {
     const newTask = prompt("Enter a new task: ");
@@ -32,8 +33,8 @@ const App = () => {
 
   return (
     <>
-      <Navbar numberOfTasks={tasks} />
-      <div className="main">
+      <Navbar numberOfTasks={tasks} darkMode={isDark} />
+      <div className={isDark ? "main dark-mode" : "main"}>
         <h1 className="title">My To-Do List</h1>
         <div className="container">
           <div className="task-list">
@@ -73,8 +74,15 @@ const App = () => {
           </div>
         </div>
         <button onClick={addTask}>Add Task</button>
-        <div className="container">
-          <h1 className="title">Completed Task</h1>
+        <button
+          onClick={() => {
+            setDark((isDark) => !isDark);
+          }}
+        >
+          Dark Mode
+        </button>
+        <h1 className="title">Completed Task</h1>
+        <div className={isDark ? "container dark-mode" : "container"}>
           <div className="task-list">
             {tasks.map((task, index) => {
               return task.completed ? (
