@@ -3,15 +3,15 @@
   --text-color: black;
 }
 
-.dark-mode {
+/* .dark-mode {
   --bg-color: black;
   --text-color: white;
-}
+} */
 
 .title {
   /* border: 2px solid red; */
   /* width: 80%; */
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   padding: 10px;
   font-size: 1.5em;
@@ -29,13 +29,12 @@
 }
 
 .task-container {
-  /* float: left; */
   width: 100%;
   height: 50px;
   border: 1px solid var(--text-color);
-  display: flex;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
   align-items: center;
-  justify-content: space-around;
 }
 
 .task-container:not(:first-child) {
@@ -49,9 +48,13 @@
   /* border: 2px solid blue; */
 }
 
-.checkBox,
 .remove-container {
-  width: 40px;
+  /* width: 40px; */
+}
+
+.checkBox {
+  /* width: 40px; */
+  /* grid-column: 1/2; */
 }
 
 .task-name {
@@ -59,8 +62,7 @@
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  min-width: 90%;
-  width: auto;
+  /* min-width: 90%; */
 }
 
 .remove-container {
@@ -119,12 +121,14 @@ button:hover {
 }
 
 .main {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* width: 80%; */
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 300ms;
   /* border: 2px solid red; */
-  float: left;
+  /* float: left; */
   height: 100vh;
 }
 
@@ -132,3 +136,14 @@ button:hover {
   content: "";
   clear: both;
 } */
+
+@media only screen and (max-width: 425px) {
+  .main {
+    display: block;
+    width: 100%;
+    /* height: auto; */
+  }
+  .checkBox > input {
+    scale: 1;
+  }
+}

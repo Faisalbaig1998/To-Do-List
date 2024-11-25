@@ -5,10 +5,10 @@
   --text-color: black;
 }
 
-.dark-mode {
+/* .dark-mode {
   --bg-color: black;
   --text-color: white;
-}
+} */
 
 #Navbar {
   width: 20%;
@@ -101,4 +101,20 @@
   color: var(--text-color);
   float: right;
   margin-right: 10px;
+}
+
+.hide-navbar {
+  width: 50px !important;
+}
+
+@media only screen and (max-width: 425px) {
+  #Navbar {
+    width: 100%;
+    height: auto;
+    /* margin-top: 20px; */
+    overflow: hidden;
+  }
+  .sidebar-items ul li {
+    text-align: center;
+  }
 }
